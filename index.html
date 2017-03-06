@@ -1,36 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="kubide">
 <head>
 	<meta charset="UTF-8">
-	<title>kubide</title>
+	<meta name="description" content="{{$state.current.data.pageDescription}}">
+  	<meta name="keywords" content="{{ $state.current.data.pageKeyWords }}">
+	<title ng-bind="$state.current.data.pageTitle">kubide</title>
 	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/style.css">
+	<base href="/">
 </head>
-<body ng-app="kubide">
-
-<ul>
-	<li>
-		<a ui-sref="foo" ui-sref-active="active">Foo</a>
-	</li>
-    <li>
-    	<a ui-sref="bar" ui-sref-active="active">Bar</a>
-    </li>
-    <li>
-    	<a ui-sref="therollingstones" ui-sref-active="active">The rolling stones</a>
-    </li>
-    <li>
-    	<a ui-sref="thebeatles" ui-sref-active="active">The beatles</a>
-    </li>
-    <li>
-    	<a ui-sref="queen" ui-sref-active="active">Queen</a>	
-    </li>
-</ul>
-
-
+<body>
     <ui-view></ui-view>
 
 	<script src="./node_modules/angular/angular.js"></script>
 	<script src="./node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<script src="./node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/controllers/homeController.js"></script>
 	<script src="js/controllers/theRollingStonesController.js"></script>

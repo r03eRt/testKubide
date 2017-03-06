@@ -65,7 +65,7 @@ body {
 	padding-right: 6vh;
 }
 
-.cnt .text h2{ 
+.cnt .text h2{
 	margin-top: 0;
 	margin-bottom: 6vh;
 }
@@ -80,6 +80,10 @@ body {
 
 }
 
+.cnt .video iframe {
+	width: 100%;
+	height: 400px; 
+}
 
 
 
