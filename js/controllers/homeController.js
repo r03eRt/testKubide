@@ -4,6 +4,4 @@ app.controller('homeController', [function()
 
 	console.log('rolling controller init');
 
-
-
 }]);
