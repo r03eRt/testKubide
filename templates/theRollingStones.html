@@ -1,12 +1,12 @@
 <div class="group-header">
-	<div class="bg"></div>
+	<div class="bg" ng-style="{'background-image':'url(/img/'+theRollingStonesCtrl.group.img+')'}"></div>
 	<div class="overlay"></div>
 	<h1>{{ theRollingStonesCtrl.group.title }}</h1>
 
 </div>
 <div class="cnt">
 	<div class="text">
-		<h2>los más nuevos creadores de <br>éxitos  en Reino Unido</h2>
+		<h2 ng-bind="theRollingStonesCtrl.group.h2"></h2>
 		<p ng-bind="theRollingStonesCtrl.group.text"></p>
 	</div>
 	<div class="video">

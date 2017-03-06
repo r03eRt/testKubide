@@ -1,1 +1,16 @@
-<h1>{{ theBeatlesCtrl.title }}</h1>
+<div class="group-header">
+	<div class="bg" ng-style="{'background-image':'url(/img/'+theBeatlesCtrl.group.img+')'}"></div>
+	<div class="overlay"></div>
+	<h1>{{ theBeatlesCtrl.group.title }}</h1>
+
+</div>
+<div class="cnt">
+	<div class="text">
+		<h2 ng-bind="theBeatlesCtrl.group.h2"></h2>
+		<p ng-bind="theBeatlesCtrl.group.text"></p>
+	</div>
+	<div class="video">
+		<youtube-video video-id="theBeatlesCtrl.group.youtube"></youtube-video>
+	</div>
+</div>
+

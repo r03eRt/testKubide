@@ -22,7 +22,6 @@ app.config(function($stateProvider) {
   var fooState = {
     name: 'foo',
     url: '/foo',
-    //template: '<h3>Foo</h3>'
     templateUrl: '../templates/foo.html',
     data : { 
       pageTitle: 'Angular Rocks',
@@ -45,7 +44,6 @@ app.config(function($stateProvider) {
   var rollingStonesState = {
     name: 'therollingstones',
     url: '/the-rolling-stones',
-    //template: '<h3>The rolling stones</h3>'
     templateUrl: '../templates/theRollingStones.html',
     controller: 'theRollingStonesController',
     controllerAs: 'theRollingStonesCtrl',

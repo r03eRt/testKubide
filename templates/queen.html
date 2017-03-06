@@ -1,1 +1,16 @@
-<h1>{{ queenCtrl.title }}</h1>
+<div class="group-header">
+	<div class="bg" ng-style="{'background-image':'url(/img/'+queenCtrl.group.img+')'}"></div>
+	<div class="overlay"></div>
+	<h1>{{ queenCtrl.group.title }}</h1>
+
+</div>
+<div class="cnt">
+	<div class="text">
+		<h2 ng-bind="queenCtrl.group.h2"></h2>
+		<p ng-bind="queenCtrl.group.text"></p>
+	</div>
+	<div class="video">
+		<youtube-video video-id="queenCtrl.group.youtube"></youtube-video>
+	</div>
+</div>
+
