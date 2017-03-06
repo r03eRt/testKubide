@@ -1,10 +1,10 @@
-app.controller('queenController', ['$scope', function($scope)
+app.controller('queenController', [function()
 {
 	var self = this;
 
 	console.log('queen controller init'),
 
-	//bind data
+	//data of the app
 	this.group = {
 		title: 'Queen',
 		img: 'queen.jpg',

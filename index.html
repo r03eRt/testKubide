@@ -5,11 +5,18 @@
 	<meta name="description" content="{{$state.current.data.pageDescription}}">
   	<meta name="keywords" content="{{ $state.current.data.pageKeyWords }}">
 	<title ng-bind="$state.current.data.pageTitle">kubide</title>
+
+	<meta property="og:title" content="{{ $state.current.data.pageTitle }}" />
+	<meta property="og:type" content="music.musician" />
+	<meta property="og:url" content="{{ $state.current.data.url }}" />
+	<meta property="og:image" content="{{ $state.current.data.img }}" />
+
 	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<base href="/">
 </head>
 <body>
+
     <ui-view></ui-view>
 
 	<script src="./node_modules/angular/angular.js"></script>

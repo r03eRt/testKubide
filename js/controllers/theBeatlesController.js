@@ -1,10 +1,10 @@
-app.controller('theBeatlesController', ['$scope', function($scope)
+app.controller('theBeatlesController', [function()
 {
 	var self = this;
 
 	console.log('The beatles controller init'),
 
-	//bind data
+	//data of the app
 	this.group = {
 		title: 'The Beatles',
 		img: 'the-beatles.png',

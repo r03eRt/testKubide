@@ -1,10 +1,11 @@
 var app = angular.module('kubide', ['ui.router', 'youtube-embed']);
 
-
+//enable HTML5 to delete #, now we need to rewrite rules on server
 app.config(["$locationProvider", function($locationProvider) {
   $locationProvider.html5Mode(true);
 }]);
 
+//page state config with title description adn keyowrods
 app.config(function($stateProvider) {
   var homeState = {
     name: 'home',
@@ -48,6 +49,9 @@ app.config(function($stateProvider) {
     controller: 'theRollingStonesController',
     controllerAs: 'theRollingStonesCtrl',
     data : { 
+      img: './img/rolling-stones.jpg',
+      url: window.location.href + 'the-rolling-stones',
+      musician: 'The Rolling Stones',
       pageTitle: 'The Rolling Stones',
       pageDescription: 'The Rolling Stones es una banda británica de rock originaria de Londres. La banda se fundó en abril de 19622 por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Ian Stewart y Charlie Watts.2 Brian Jones fue despedido en junio de 1969, falleciendo tres semanas después, siendo reemplazado por el guitarrista Mick Taylor, que dejaría el grupo en 1975 y sería a su vez reemplazado por Ron Wood. Con el retiro de Bill Wyman en 1993 se incluyó al bajista Darryl Jones que, aunque toca con la banda desde la grabación del álbum Voodoo Lounge en 1994, no es un miembro oficial.',
       pageKeyWords: 'rolling, rock, stones'   
@@ -61,6 +65,9 @@ app.config(function($stateProvider) {
     controller: 'theBeatlesController',
     controllerAs: 'theBeatlesCtrl',
     data : { 
+      img: './img/the-beatles.png',
+      url: window.location.href + 'the-beatles' ,
+      musician: 'The Beatles',
       pageTitle: 'The Beatles',
       pageDescription: 'The Beatles fue una banda de pop/rock inglesa activa durante la década de 1960, y reconocida como la más exitosa comercialmente y críticamente aclamada en la historia de la música popular.1 2 3 4 5 Formada en Liverpool, estuvo constituida desde 1962 por John Lennon (guitarra rítmica, vocalista), Paul McCartney (bajo, vocalista), George Harrison (guitarra solista, vocalista) y Ringo Starr (batería, vocalista). ',
       pageKeyWords: 'pop, rock, Londres, 1960'   
@@ -74,12 +81,16 @@ app.config(function($stateProvider) {
     controller: 'queenController',
     controllerAs: 'queenCtrl',
     data : { 
+      img: './img/queen.jpg',
+      url: window.location.href + 'queen' ,
+      musician: 'Queen',
       pageTitle: 'Queen',
       pageDescription: 'Queen es una banda británica de rock formada en 1970 en Londres por el cantante Freddie Mercury, el guitarrista Brian May, el baterista Roger Taylor y el bajista John Deacon. Si bien el grupo ha presentado bajas de dos de sus miembros (Mercury, fallecido en 1991, y Deacon, retirado en 1997), los integrantes restantes, May y Taylor, continúan trabajando bajo el nombre Queen, por lo que la banda aún es considerada activa.',
       pageKeyWords: 'Queen, rock, banda, Londres'   
     }
   }
 
+  //register routes
   $stateProvider.state(homeState);
   $stateProvider.state(fooState);
   $stateProvider.state(barState);
@@ -88,7 +99,7 @@ app.config(function($stateProvider) {
   $stateProvider.state(queenState);
 });
 
-
+//each run passs the variables to the current app to changes titles and descriptions
 app.run([ '$rootScope', '$state', '$stateParams',
 function ($rootScope, $state, $stateParams) {
   $rootScope.$state = $state;

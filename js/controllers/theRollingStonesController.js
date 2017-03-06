@@ -1,4 +1,4 @@
-app.controller('theRollingStonesController', ['$scope', function($scope)
+app.controller('theRollingStonesController', [function()
 {
 	//context vars
 	var self = this;
